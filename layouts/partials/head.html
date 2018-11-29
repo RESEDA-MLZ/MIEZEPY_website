@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>{{ .Title }} -- {{ .Site.Title }}</title>
+{{ if .RSSLink }}
+<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" /> {{ end }}
+<!-- Bootstrap Core CSS -->
+<link href="{{ .Site.BaseURL }}/css/bootstrap.min.css" rel="stylesheet">
+<!-- Theme CSS -->
+<link href="{{ .Site.BaseURL }}/css/theme.css" rel="stylesheet">
+<!-- Latex -->
+<link href="{{ .Site.BaseURL }}/css/mathjax-style.css" rel="stylesheet">
+<!-- Highlight -->
+<link href="{{ .Site.BaseURL }}/css/vs.css" rel="stylesheet">
+<!-- baguetteBox gallery -->
+<link href="{{ .Site.BaseURL }}/css/baguetteBox.min.css" rel="stylesheet">
+<link href="{{ .Site.BaseURL }}/css/gallery-grid.css" rel="stylesheet">
+<!-- Custom -->
+{{ range .Site.Params.custom_css -}}
+    <link href="{{ . | absURL }}" rel="stylesheet">
+{{- end }}
+<!-- Custom Fonts -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel='stylesheet'  type='text/css'> 
+{{ partial "mathjax_support.html" . }}
+</head>

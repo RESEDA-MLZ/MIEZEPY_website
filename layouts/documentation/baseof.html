@@ -1,0 +1,19 @@
+{{ $layout := "col-lg-12" }}
+{{- partial "header_page.html" (dict "currentNode" . "layout" $layout) }}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      {{ if .Site.Params.Debug}}theme/layout/documentation/baseof.html{{end}}
+      {{ block "main_body" . }}
+      {{ end }}
+      {{ partial "next-prev-page.html" . }}
+    </div>
+    <div class="col-md-4">
+      {{- partial "sidebar.html" . }}
+    </div>
+  </div>
+</div>
+
+{{- partial "footer.html" . }}
+
