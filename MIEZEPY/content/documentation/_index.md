@@ -1,20 +1,12 @@
 +++
 title = "Documentation"
-description = "BornAgain documentation"
+description = "MIEZEPY documentation"
 weight = 10
 +++
 
 ### Documentation
 
-{{% alert theme="success" %}}
-**Welcome!**
-
-This is a playground to test Hugo documentation theme for 
-various software projects of the Scientific Computing Group at MLZ.
-
-{{% /alert %}}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. 
+The present documentation will guide your through the installation and setup of the applications for three main operating systems. Furthermore the application can be launched within a terminal (python environment) as well as in jupyter notebooks or its standalone GUI. All step by step instructions are listed bellow.
 
 
 {{% children depth="2" %}}
