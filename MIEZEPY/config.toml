@@ -20,8 +20,8 @@ PygmentsStyle = "vs"
   Description = "MIEZEPY Documentation"
   Author = "Alexander Schober"
   email = "alex.schober@mac.com"
-  custom_css = ["css/mieze_python.css"]
-  custom_js = ["js/mieze_python.js"]
+  custom_css = ["css/MIEZEPY.css"]
+  custom_js = ["js/MIEZEPY.js"]
   logo = "img/site-logo.png"
   Debug = false
 

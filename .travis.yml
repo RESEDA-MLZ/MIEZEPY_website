@@ -7,12 +7,12 @@ install:
   - mkdir -p $HOME/bin
   - mv ./hugo $HOME/bin/hugo
 script:
-  - hugo -s exampleSite
+  - hugo -s MIEZEPY
 
 deploy:
   provider: pages
   skip-cleanup: true
-  local-dir: "exampleSite/public"
+  local-dir: "MIEZEPY/public"
   github-token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   on:
     branch: master
