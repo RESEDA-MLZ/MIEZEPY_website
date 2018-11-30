@@ -2,7 +2,7 @@ baseURL = "https://alexanderschober.github.io/mieze_python_website/"
 theme = "mieze_python_website"
 themesdir = "../.."
 languageCode = "en-us"
-title = "ProjectName"
+title = "MIEZEPY"
 MetaDataFormat = "toml"
 canonifyURLs = true
 sectionPagesMenu = "main"
@@ -17,25 +17,25 @@ PygmentsStyle = "vs"
 
 [params]
   DateForm = "Mon, Jan 2, 2006"
-  Description = "Your site description"
-  Author = "James Bond"
-  email = "james.bond@gmail.com"
-  custom_css = ["css/exampleSite.css"]
-  custom_js = ["js/exampleSite.js"]
+  Description = "MIEZEPY Documentation"
+  Author = "Alexander Schober"
+  email = "alex.schober@mac.com"
+  custom_css = ["css/mieze_python.css"]
+  custom_js = ["js/mieze_python.js"]
   logo = "img/site-logo.png"
   Debug = false
 
 
 [[params.social]]
     title = "github"
-    url = "https://github.com/gamesbond"
+    url = "https://github.com/scgmlz/NSE_Soft"
 
 [params.authors.author1]
-  name = "First Author"
+  name = "Alexander Schober"
   url = "http://first-author.com"
   
 [params.authors.author2]
-  name = "Second Author"
+  name = "Gennady Pospelov"
   url = "http://second-author.com"
 
 [[menu.main]]
