@@ -1,4 +1,4 @@
-baseURL = "https://alexanderschober.github.io/mieze_python_website/"
+baseURL = "https://alexanderschober.github.io/MIEZEPY_website/"
 theme = "hugo-theme-scgdoc"
 languageCode = "en-us"
 title = "MIEZEPY"
