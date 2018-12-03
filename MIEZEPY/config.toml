@@ -1,6 +1,5 @@
 baseURL = "https://alexanderschober.github.io/mieze_python_website/"
-theme = "mieze_python_website"
-themesdir = "../.."
+theme = "hugo-theme-scgdoc"
 languageCode = "en-us"
 title = "MIEZEPY"
 MetaDataFormat = "toml"
