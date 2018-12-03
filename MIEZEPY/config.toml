@@ -47,11 +47,11 @@ PygmentsStyle = "vs"
   name = "News"
   identifier="post"
   url = "/post/"
-  weight = 20
+  weight = 30
 
 [[menu.main]]
   name = "Documentation"
   identifier = "documentation"
   url = "/documentation/"
-  weight = 30
+  weight = 40
 
