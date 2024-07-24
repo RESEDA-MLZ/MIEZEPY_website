@@ -15,17 +15,27 @@ jobs:
 
     - name: Setup Hugo
       run: |
+        set -x  # Enable debug mode
         HUGO_VERSION="0.37.1"
         HUGO_PACKAGE="hugo_${HUGO_VERSION}_Linux-64bit.tar.gz"
         wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_PACKAGE}"
         tar -xzvf ${HUGO_PACKAGE}
         sudo mv hugo /usr/local/bin/
+        hugo version  # Verify Hugo installation
 
-    - name: Verify Hugo Installation
-      run: hugo version
+    - name: Verify Directory Permissions
+      run: |
+        ls -alh
+        ls -alh public || true  # List directory and ignore error if not present
 
     - name: Build Hugo Site
       run: hugo --verbose
 
     - name: List Generated Files
       run: ls -R public
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
