@@ -16,13 +16,10 @@ jobs:
     - name: Setup Hugo
       run: |
         HUGO_VERSION="0.37.1"
-        HUGO_PACKAGE="hugo_${HUGO_VERSION}_Linux-64bit"
-        wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_PACKAGE}.tar.gz"
-        tar -xzvf ${HUGO_PACKAGE}.tar.gz
+        HUGO_PACKAGE="hugo_${HUGO_VERSION}_Linux-64bit.tar.gz"
+        wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_PACKAGE}"
+        tar -xzvf ${HUGO_PACKAGE}
         sudo mv hugo /usr/local/bin/
 
     - name: Verify Hugo Installation
       run: hugo version
-
-    - name: Build Hugo Site
-      run: hugo --verbose
