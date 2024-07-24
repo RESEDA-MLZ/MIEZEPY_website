@@ -10,15 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Set up environment for debug logging
-      run: echo "ACTIONS_STEP_DEBUG=true" >> $GITHUB_ENV
-
     - name: Checkout Repository
       uses: actions/checkout@v4
 
     - name: Setup Hugo
       run: |
-        set -x  # Enable debug mode
         HUGO_VERSION="0.37.1"
         HUGO_PACKAGE="hugo_${HUGO_VERSION}_Linux-64bit.tar.gz"
         wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_PACKAGE}"
@@ -26,25 +22,11 @@ jobs:
         sudo mv hugo /usr/local/bin/
         hugo version  # Verify Hugo installation
 
-    - name: Verify Directory and File Permissions
-      run: |
-        echo "Listing root directory:"
-        ls -alh
-        echo "Listing project directory:"
-        ls -alh $GITHUB_WORKSPACE
-        echo "Listing public directory if it exists:"
-        ls -alh $GITHUB_WORKSPACE/public || true
-
     - name: Build Hugo Site
-      run: |
-        set -x  # Enable debug mode
-        hugo --verbose
-        echo "Hugo build completed with exit code $?"
+      run: hugo --verbose
 
     - name: List Generated Files
-      run: |
-        echo "Listing files in public directory:"
-        ls -R public
+      run: ls -R public
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
