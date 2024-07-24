@@ -1,0 +1,31 @@
+name: Build and Deploy Hugo Site
+
+on:
+  push:
+    branches:
+      - master  # Change this to your main branch if different, e.g., main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Setup Hugo
+      run: |
+        HUGO_VERSION="0.37.1"
+        HUGO_PACKAGE="hugo_${HUGO_VERSION}_Linux-64bit"
+        wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_PACKAGE}.tar.gz"
+        tar -xzvf ${HUGO_PACKAGE}.tar.gz
+        sudo mv hugo /usr/local/bin/hugo
+
+    - name: Build Hugo Site
+      run: hugo
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
