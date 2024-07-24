@@ -23,19 +23,21 @@ jobs:
         sudo mv hugo /usr/local/bin/
         hugo version  # Verify Hugo installation
 
-    - name: Verify Directory Permissions
+    - name: Verify Directory and File Permissions
       run: |
+        echo "Listing root directory:"
         ls -alh
-        ls -alh public || true  # List directory and ignore error if not present
+        echo "Listing project directory:"
+        ls -alh $GITHUB_WORKSPACE
+        echo "Listing public directory if it exists:"
+        ls -alh $GITHUB_WORKSPACE/public || true
 
     - name: Build Hugo Site
-      run: hugo --verbose
+      run: |
+        set -x  # Enable debug mode
+        hugo --verbose
 
     - name: List Generated Files
-      run: ls -R public
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public
+      run: |
+        echo "Listing files in public directory:"
+        ls -R public
