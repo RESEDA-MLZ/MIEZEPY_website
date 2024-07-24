@@ -14,7 +14,7 @@ jobs:
       run: echo "ACTIONS_STEP_DEBUG=true" >> $GITHUB_ENV
 
     - name: Checkout Repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Setup Hugo
       run: |
@@ -39,8 +39,15 @@ jobs:
       run: |
         set -x  # Enable debug mode
         hugo --verbose
+        echo "Hugo build completed with exit code $?"
 
     - name: List Generated Files
       run: |
         echo "Listing files in public directory:"
         ls -R public
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
