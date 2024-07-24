@@ -23,3 +23,6 @@ jobs:
 
     - name: Verify Hugo Installation
       run: hugo version
+
+    - name: Build Hugo Site
+      run: hugo --verbose
