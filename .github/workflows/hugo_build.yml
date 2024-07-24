@@ -23,15 +23,3 @@ jobs:
 
     - name: Verify Hugo Installation
       run: hugo version
-
-    - name: Build Hugo Site
-      run: hugo --verbose
-
-    - name: List Generated Files
-      run: ls -R public
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public
