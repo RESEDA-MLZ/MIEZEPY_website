@@ -13,19 +13,18 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
-
-
     - name: Setup Hugo
-  run: |
-    HUGO_VERSION="0.37.1"
-    HUGO_PACKAGE="hugo_${HUGO_VERSION}_Linux-64bit"
-    wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_PACKAGE}.tar.gz"
-    tar -xzvf ${HUGO_PACKAGE}.tar.gz
-    sudo mv hugo /usr/local/bin/
-- name: Build Hugo Site
-  run: |
-    hugo version
-    hugo
+      run: |
+        HUGO_VERSION="0.37.1"
+        HUGO_PACKAGE="hugo_${HUGO_VERSION}_Linux-64bit"
+        wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_PACKAGE}.tar.gz"
+        tar -xzvf ${HUGO_PACKAGE}.tar.gz
+        sudo mv hugo /usr/local/bin/
+
+    - name: Build Hugo Site
+      run: |
+        hugo version
+        hugo
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
