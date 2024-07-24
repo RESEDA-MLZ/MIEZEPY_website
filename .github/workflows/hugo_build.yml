@@ -20,14 +20,23 @@ jobs:
         wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_PACKAGE}.tar.gz"
         tar -xzvf ${HUGO_PACKAGE}.tar.gz
         sudo mv hugo /usr/local/bin/
+      shell: bash
+
+    - name: Verify Hugo Installation
+      run: hugo version
+      shell: bash
 
     - name: Build Hugo Site
-      run: |
-        hugo version
-        hugo
+      run: hugo --verbose
+      shell: bash
+
+    - name: List Generated Files
+      run: ls -R public
+      shell: bash
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
+      shell: bash
