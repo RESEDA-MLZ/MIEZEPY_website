@@ -1,4 +1,4 @@
-baseURL = "https://scgmlz.github.io/MIEZEPY_website/"
+baseURL = "https://RESEDA-MLZ.github.io/MIEZEPY_website/"
 theme = "hugo-theme-scgdoc"
 languageCode = "en-us"
 title = "MIEZEPY"
@@ -26,7 +26,7 @@ PygmentsStyle = "vs"
 
 [[params.social]]
     title = "github"
-    url = "https://github.com/scgmlz/NSE_Soft"
+    url = "https://github.com/RESEDA-MLZ/NSE_Soft"
 
 [params.authors.author1]
   name = "Alexander Schober"
@@ -35,6 +35,10 @@ PygmentsStyle = "vs"
 [params.authors.author2]
   name = "Gennady Pospelov"
   url = "http://second-author.com"
+
+[params.authors.author3]
+  name = "Christoph Herb"
+  url = "http://third-author.com"
 
 [[menu.main]]
   name = "Home"
