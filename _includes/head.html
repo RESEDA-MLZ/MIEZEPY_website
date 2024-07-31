@@ -10,17 +10,17 @@
 <title>{{ page.title }} -- {{ site.title }}</title>
 <link rel="icon" href="/bornagain-logo.png">
 <!-- Bootstrap Core CSS -->
-<link href="{{ site.config.BaseURL }}/css/bootstrap.min.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet">
 <!-- Theme CSS -->
-<link href="{{ site.config.BaseURL }}/css/theme.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/css/theme.css" rel="stylesheet">
 <!-- Highlight -->
-<link href="{{ site.config.BaseURL }}/css/vs.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/css/vs.css" rel="stylesheet">
 <!-- baguetteBox gallery -->
-<link href="{{ site.config.BaseURL }}/css/baguetteBox.min.css" rel="stylesheet">
-<link href="{{ site.config.BaseURL }}/css/gallery-grid.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/css/baguetteBox.min.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/css/gallery-grid.css" rel="stylesheet">
 <!-- Custom -->
 {% for p in site.params.custom_css %}
-    <link href="{{ site.baseurl }}{{ p }}" rel="stylesheet">
+    <link href="{{ site.baseurl }}/{{ p }}" rel="stylesheet">
 {% endfor %}
 <!-- Custom Fonts -->
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
