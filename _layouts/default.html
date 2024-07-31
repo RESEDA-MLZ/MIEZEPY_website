@@ -1,0 +1,13 @@
+{% assign layout = "col-lg-8 offset-lg-2" %}
+
+{% include header_page.html layout=layout %}
+
+<div class="container">
+  <div class="row">
+    <div class="{{ layout }}">
+        {{ content }}
+    </div>
+  </div>
+</div>
+
+{% include footer.html %}

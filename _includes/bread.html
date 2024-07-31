@@ -1,0 +1,17 @@
+{% if page.url != "/" %}
+{% if page.type == "documentation" or page.type == "post" or page.params.breadcrumb != "" %}
+<div class="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="{{ include.layout }}">
+    {% if page.parent != "" %}
+        <a href='#'>{{ page.parent }}</a> > {{ page.title }}
+    {% else %}
+       {{ page.title }}
+    {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endif %}

@@ -1,0 +1,27 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-primary">
+    <a class="navbar-brand" href="{{ site.baseurl }}">
+        <img src="{{ site.baseurl }}{{ site.params.logo }}" class="d-inline-block align-top" alt="">
+        {{ site.title }}
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        {% for p in site.menu %}
+          <li class="nav-item {% if page.url == p.url %} active{% endif %}"> <a class="nav-link" href="{{ p.url }}">{{ p.name }}</a></li>
+        {% endfor %}  
+        {% for p in site.params.social %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ p.url }}" target="_blank" rel="noopener" aria-label="GitHub">
+              <span class="fa fa-github fa-2x"></span>
+            </a>
+          </li>        
+        {% endfor %}
+        {{page.url}}|{{p.url}}
+      </ul>
+    </div>
+  </nav>
+</div>
+  
