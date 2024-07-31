@@ -69,8 +69,8 @@ menu:
     url: "/about/"
     weight: 15
   - name: "News"
-    identifier: "post"
-    url: "/post/"
+    identifier: "news"
+    url: "/news/"
     weight: 30
   - name: "Documentation"
     identifier: "documentation"
@@ -83,6 +83,12 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "default"
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # automatically set is_post=true for all posts
 
 # Build settings
 plugins:

@@ -6,6 +6,9 @@
   <div class="row">
     <div class="{{ layout }}">
         {{ content }}
+        {% if page.is_post %}
+        <p class = "float-right text-muted"> {{ page.date | date: "%B %e, %Y"  }}   </p>
+        {% endif %}
     </div>
   </div>
 </div>

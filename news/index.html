@@ -9,7 +9,7 @@ weight: 20
           <div class="post-page">
           {% for post in paginator.posts %}
               <div class="post-preview">
-                <a href="{{ post.permalink }}">
+                <a href="{{ site.baseurl }}{{ post.url }}">
                   <h2 class="post-title">{{ post.title }}</h2>
                   <h3 class="post-subtitle">{{ post.description }}</h3>
                 </a>
@@ -31,9 +31,9 @@ weight: 20
                 <a href="#" class="page-link">Previous</a>
               </li>  
               {% endif %}
-                <li class="page-item  active">
-                    {{ paginator.page }} of {{ paginator.total_pages }}
-                </li>
+              <li class="page-item active">
+                <a href="#" class="page-link">{{ paginator.page }} of {{ paginator.total_pages }}</a>
+              </li>
               {% if paginator.next_page %}
               <li class="page-item">
                 <a href="{{ paginator.next_page_path }}" class="page-link">Next</a>
