@@ -22,7 +22,7 @@ title: MIEZEPY
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   MIEZEPY Documentation
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/MIEZEPY_website" # the subpath of your site, e.g. /blog
 url: "https://me2d09.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 copyright: "RESEDA"
 
