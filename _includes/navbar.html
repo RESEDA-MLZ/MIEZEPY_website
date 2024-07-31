@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
         {% for p in site.menu %}
-          <li class="nav-item {% if page.url == p.url %} active{% endif %}"> <a class="nav-link" href="{{ p.url }}">{{ p.name }}</a></li>
+          <li class="nav-item {% if page.url == p.url %} active{% endif %}"> <a class="nav-link" href="{{ site.baseurl }}{{ p.url }}">{{ p.name }}</a></li>
         {% endfor %}  
         {% for p in site.params.social %}
           <li class="nav-item">
