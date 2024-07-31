@@ -32,6 +32,7 @@ canonifyURLs: true
 sectionPagesMenu: "main"
 
 paginate: 5
+paginate_path: "/news/:num/"
 
 # Code
 PygmentsCodeFences: true
@@ -86,6 +87,7 @@ defaults:
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default.

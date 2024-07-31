@@ -1,13 +1,11 @@
-+++
-type = "post"
-title = "Version 0.1.0 released"
-description = "This is the first fully functional version of MIEZEPY"
-date = 2019-01-24
-draft = false
-authors = ["Alexander Schober"]
-tags = ["Software"]
-categories = ["News"]
-+++
+---
+type: "post"
+title: "Version 0.1.0 released"
+description: "This is the first fully functional version of MIEZEPY"
+date: 2019-01-24
+draft: false
+author: "Alexander Schober"
+---
 
 # Version 0.1.0 released
 
