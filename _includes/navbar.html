@@ -14,7 +14,7 @@
         {% endfor %}  
         {% for p in site.params.social %}
           <li class="nav-item">
-            <a class="nav-link" href="{{ p.url }}" target="_blank" rel="noopener" aria-label="GitHub">
+            <a class="nav-link" href="{{ site.baseurl }}{{ p.url }}" target="_blank" rel="noopener" aria-label="GitHub">
               <span class="fa fa-github fa-2x"></span>
             </a>
           </li>        
