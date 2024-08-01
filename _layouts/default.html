@@ -1,0 +1,16 @@
+{% assign layout = "col-lg-10 offset-lg-1" %}
+
+{% include header_page.html layout=layout %}
+
+<div class="container">
+  <div class="row">
+    <div class="{{ layout }}">
+        {{ content }}
+        {% if page.is_post %}
+        <p class = "float-right text-muted"> {{ page.date | date: "%B %e, %Y"  }}   </p>
+        {% endif %}
+    </div>
+  </div>
+</div>
+
+{% include footer.html %}

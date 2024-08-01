@@ -1,0 +1,50 @@
+    <hr>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                  <ul class="list-inline text-center">
+                    {% for p in site.params.email %}
+                      <li class="list-inline-item social">
+                        <a href="mailto:{{ . }}">
+                          <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                          </span>
+                        </a>
+                      </li>
+                    {% endfor %}
+                    {% for p in site.params.social %}
+                    <li class="list-inline-item social">
+                      <a href="{{ p.url }}">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-{{ p.title }} fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                  <p class="copyright text-muted">{{ site.config.copyright }}</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+    <!-- Setting baguetteBox gallery -->
+    <script src="{{ site.baseurl }}/js/baguetteBox.min.js"></script>
+    <script>
+      baguetteBox.run('.galleryscg');
+    </script>    
+    <!-- JavaScript -->
+    <script src="{{ site.baseurl }}/js/theme.js"></script>
+    <!-- Custom -->
+    {% for p in site.params.custom_js %}
+    <script src="{{ site.baseurl }}/{{ p }}"></script>
+    {% endfor %}
+</body>
+</html>

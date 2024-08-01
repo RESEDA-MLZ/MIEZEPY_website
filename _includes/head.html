@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ site.config.languageCode }}">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>{{ page.title }} -- {{ site.title }}</title>
+<!-- Bootstrap Core CSS -->
+<link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet">
+<!-- Theme CSS -->
+<link href="{{ site.baseurl }}/css/theme.css" rel="stylesheet">
+<!-- Highlight -->
+<link href="{{ site.baseurl }}/css/vs.css" rel="stylesheet">
+<!-- baguetteBox gallery -->
+<link href="{{ site.baseurl }}/css/baguetteBox.min.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/css/gallery-grid.css" rel="stylesheet">
+<!-- Custom -->
+{% for p in site.params.custom_css %}
+    <link href="{{ site.baseurl }}/{{ p }}" rel="stylesheet">
+{% endfor %}
+<!-- Custom Fonts -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel='stylesheet'  type='text/css'>
+</head>

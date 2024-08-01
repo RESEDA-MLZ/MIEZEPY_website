@@ -1,0 +1,24 @@
+{% include header_page.html layout="col-lg-12" %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+        {{ content }}
+        {% if page.subtree %}
+        {% assign d = page.subtree | split: "/" | size %}
+        {% include listdir.html folder=page.subtree depth=d showdesc=true %}      
+        {% endif %}
+    </div>
+    <div class="col-md-4">
+      <ul class="doctree">
+        <li class="dd-item parent active">
+          <i class="fa liOpened li-item-icon"></i>
+          <a href="{{ site.baseurl }}/documentation/"><span>Documentation</span></a>
+          {% include listdir.html folder="/documentation/" depth=2 style="doctree" %}      
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% include footer.html %}
