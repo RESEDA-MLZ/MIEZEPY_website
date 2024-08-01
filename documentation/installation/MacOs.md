@@ -1,7 +1,7 @@
-+++
-title = "MacOs"
-weight = 22
-+++
+---
+title: "MacOs"
+weight: 22
+---
 
 # Installing MIEZEPY on MacOs X
 
@@ -40,7 +40,7 @@ $ pip3 --version
 
 If the above command fails try to replace pip3 ith pip as pip not being installed by default on linux it might select the former namespace. Finnally, the output should be the version numbers of python and pip above 3.6.6 and 18.1 (at the time of writing) respectively.
 
-![Example image](/img/mac_version_test.png#center)
+![Example image]({{ site.baseurl }}/img/mac_version_test.png#center)
 
 
 ### 3. Installing the dependencies and software

@@ -1,5 +1,5 @@
-+++
-title = "Frequently asked questions"
-weight = 220
-+++
+---
+title: "Frequently asked questions"
+weight: 220
+---
 

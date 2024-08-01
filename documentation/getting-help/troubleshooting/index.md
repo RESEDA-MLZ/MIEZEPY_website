@@ -1,7 +1,7 @@
-+++
-title = "Troubleshooting"
-weight = 210
-+++
+---
+title: "Troubleshooting"
+weight: 210
+---
 
 ## Troubleshooting
 

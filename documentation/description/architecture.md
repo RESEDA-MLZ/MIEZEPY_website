@@ -1,8 +1,8 @@
-+++
-title = "Architecture"
-description = "Description of the software architecture"
-weight = 42
-+++
+---
+title: "Architecture"
+description: "Description of the software architecture"
+weight: 42
+---
 
 ### MIEZEPY Architecture
 
@@ -19,6 +19,6 @@ During the development of MIEZEPY a strong emphasis was done to separate individ
 - <b> The procedure class </b> can be seen as the surface layout that will make all work together in a neat way. It is in charge to handle the user commands and grab the data and fitting classes to feed the result. Only the io procedures are independent from this. 
 
 The diagram below gives a visual interpretation of the introduced classes. 
-![Example image](/img/architecture_diagram.png#center)
+![Example image]({{ site.baseurl }}/img/architecture_diagram.png#center)
 
 As you can also see on the present diagram the GUI component is decoupled of the Core. This has the advantage that MIEZEPY does not rely on the GUI to fucntion, thus can be launched in a Jupyter notebook. 

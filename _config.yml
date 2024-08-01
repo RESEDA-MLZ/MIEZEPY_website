@@ -85,6 +85,11 @@ defaults:
       layout: "default"
   -
     scope:
+      path: "documentation" # an empty string here means all files in the project
+    values:
+      layout: "documentation"
+  -
+    scope:
       path: ""      # empty string for all files
       type: posts   # limit to posts
     values:

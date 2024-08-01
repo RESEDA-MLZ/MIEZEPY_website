@@ -1,7 +1,7 @@
-+++
-title = "Linux"
-weight = 21
-+++
+---
+title: "Linux"
+weight: 21
+---
 
 # Installing MIEZEPY on Linux
 
@@ -9,7 +9,7 @@ Currently Linux only supports an installation through the terminal. In the follo
 
 ### 1. Downloading the source
 
-![Example image](/img/Linux_open_terminal.png#floatright)The GitHub repository of the MIEZEPY project can be downloaded [here](https://github.com/scgmlz/NSE_Soft). As the download completes the user is required to unzip the .zip content and open a terminal window in the downloaded folder. This can be done by either rightclicking an empty field within the folder and selecting ```Open terminal``` or directly entering ```cd Path/to/folder``` in an already opened terminal window.
+![Example image]({{ site.baseurl }}/img/Linux_open_terminal.png#floatright)The GitHub repository of the MIEZEPY project can be downloaded [here](https://github.com/scgmlz/NSE_Soft). As the download completes the user is required to unzip the .zip content and open a terminal window in the downloaded folder. This can be done by either rightclicking an empty field within the folder and selecting ```Open terminal``` or directly entering ```cd Path/to/folder``` in an already opened terminal window.
 
 ### 2. Installing Python 3
 
@@ -31,7 +31,7 @@ $ pip3 --version
 
 If the above command fails try to replace pip3 ith pip as pip not being installed by default on linux it might select the former namespace. Finally, the output should be the version numbers of python and pip above 3.6.6 and 18.1 (at the time of writing) respectively.
 
-![Example image](/img/linux_version_test.png#center)
+![Example image]({{ site.baseurl }}/img/linux_version_test.png#center)
 
 
 ### 3. Installing the dependencies and software

@@ -1,7 +1,7 @@
-+++
-title = "Windows"
-weight = 23
-+++
+---
+title: "Windows"
+weight: 23
+---
 
 # Installing MIEZEPY on Windows OS
 
@@ -11,7 +11,7 @@ Currently Windows only supports an installation through the command prompt. In t
 
 The GitHub repository of the MIEZEPY project can be downloaded here: https://github.com/scgmlz/NSE_Soft. As the download is completed the user is required to unzip the .zip content and open a terminal window in the downloaded folder. This can be done by either right clicking on an empty field within the folder and selecting Open terminal or by directly entering cd Path/to/folder in an already opened terminal window.
 
-![Example image](/img/windows_download.png#center)
+![Example image]({{ site.baseurl }}/img/windows_download.png#center)
 
 ### 2. Make sure anaconda is installed
 
@@ -19,7 +19,7 @@ Anaconda (for Windows) can be downloaded here: https://www.anaconda.com/download
 Before installing this software, it is useful to create a separate environment in anaconda. Follow the steps from: https://conda.io/docs/user-guide/tasks/manage-environments.html to create an environment with the current version of python3 (3.7 at 18.12.2018).
 Activate this environment.
 
-![Example image](/img/windows_env.png#center)
+![Example image]({{ site.baseurl }}/img/windows_env.png#center)
 
 ### 3. Check pip and python installation
 
@@ -28,7 +28,7 @@ In order to install the miezepy package and run it as intended we recommend to u
 $ python --version
 $ pip --version
 ```
-![Example image](/img/windows_python_version.png#center)
+![Example image]({{ site.baseurl }}/img/windows_python_version.png#center)
 
 ### 4. Installing the requirements
 
@@ -50,7 +50,7 @@ In the event that you which to completely use the anaconda package manager you c
 $ conda install --yes --file requirements.txt 
 ```
 
-![Example image](/img/windows_requirements.png#center)
+![Example image]({{ site.baseurl }}/img/windows_requirements.png#center)
 
 It may be necessary to install some packages separately via this installation route as well. Once the requirements are installed a graphical PyQt library and plotting library derived from PyQt and pyqtgraph, can be installed:
 
@@ -75,4 +75,4 @@ $ python3
     >> import miezepy
     >> miezepy.__version__
 ```
-![Example image](/img/windows_version_test.png#center)
+![Example image]({{ site.baseurl }}/img/windows_version_test.png#center)
