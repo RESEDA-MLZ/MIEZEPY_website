@@ -4,11 +4,26 @@
   <div class="container">
     <div class="row">
       <div class="{{ include.layout }}">
-    {% if page.parent != "" %}
-        <a href='#'>{{ page.parent }}</a> > {{ page.title }}
-    {% else %}
-       {{ page.title }}
-    {% endif %}
+        {% if page.is_post %}
+        <a href='{{ site.baseurl }}news/'>News</a> > {{ page.title }}
+        {% else %}
+        {% assign tree = page.url | split: "/" "%}
+        {% assign path = "/" %}
+        {% for p in tree %}
+        {% if p == "" %}
+        {% elsif p contains "." %}
+        {% if forloop.index > 2 %}> {% endif %}{{ page.title }}
+        {% else %}
+        {% assign path = path | append: p | append: "/" %}
+        {% if forloop.index > 2 %}>{% endif %}
+        {% for pg in site.pages %}
+        {% if pg.url == path  %}
+        <a href='{{ site.baseurl }}{{ pg.url }}'>{{ pg.title }}</a>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
       </div>
     </div>
   </div>

@@ -52,7 +52,7 @@ params:
 
   social:
     - title: "github"
-      url: "https://github.com/RESEDA-MLZ/NSE_Soft"
+      url: "https://github.com/RESEDA-MLZ/miezepy"
 
   authors:
     - name: "Alexander Schober"

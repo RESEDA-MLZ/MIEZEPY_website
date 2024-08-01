@@ -5,4 +5,4 @@ weight: 300
 
 ## Developer's corner
 
-Recipes regarding the BornAgain development workflow.
+Recipes regarding the MIEZEPY development workflow.
