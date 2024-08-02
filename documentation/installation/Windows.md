@@ -11,14 +11,12 @@ Currently Windows only supports an installation through the command prompt. In t
 
 The GitHub repository of the MIEZEPY project can be downloaded here: https://github.com/RESEDA-MLZ/miezepy. As the download is completed the user is required to unzip the .zip content and open a terminal window in the downloaded folder. This can be done by either right clicking on an empty field within the folder and selecting Open terminal or by directly entering cd Path/to/folder in an already opened terminal window.
 
-![Example image]({{ site.baseurl }}/img/windows_download.png#center)
 
 ### 2. Make sure anaconda is installed
 
 Anaconda (for Windows) can be downloaded here: https://www.anaconda.com/download/#windows
 Before installing this software, it is useful to create a separate environment in anaconda. Follow the steps from: https://conda.io/docs/user-guide/tasks/manage-environments.html to create an environment with version 3.7 of python. Currently (02.08.2024) newer version are not supported due to some requirement conflicts with simpleplot_qt(https://github.com/AlexanderSchober/simpleplot_qt.git). We are working on fixing this issue. 
 Activate this environment.
-![Example image]({{ site.baseurl }}/img/windows_env.png#center)
 
 ### 3. Check pip and python installation
 
@@ -27,7 +25,6 @@ In order to install the miezepy package and run it as intended we recommend to u
 $ python --version
 $ pip --version
 ```
-![Example image]({{ site.baseurl }}/img/windows_python_version.png#center)
 
 ### 4. Installing the requirements
 
@@ -47,4 +44,3 @@ Once the installation is finished the software can be tested by launching the py
 ```bash
 $ python miezepy.py
 ```
-![Example image]({{ site.baseurl }}/img/windows_version_test.png#center)
