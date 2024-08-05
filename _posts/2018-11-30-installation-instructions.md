@@ -3,7 +3,7 @@ type: "post"
 title: "Migrated webpage"
 description: "Installation instructions for Linux and MacOs were edited"
 date: 2018-11-30T18:28:35+01:00
-draft: false
+draft: true
 author: "Alexander Schober"
 ---
 
