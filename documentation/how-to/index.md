@@ -1,9 +1,9 @@
 ---
-title: "How-To"
+title: "How-To MIEZEPY"
 weight: 60
 subtree: /documentation/how-to/
 ---
 
-### How-To
+### How-To MIEZEPY
 
 Here are listed the How-Tos

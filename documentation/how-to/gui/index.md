@@ -1,5 +1,5 @@
 ---
-title: "How-To"
+title: "How-To use the GUI"
 description: "Introduction on performing basic tasks through the GUI of MIEZEPY "
 weight: 80
 subtree: /documentation/how-to/gui/
@@ -7,7 +7,6 @@ subtree: /documentation/how-to/gui/
 
 ### How-To
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
