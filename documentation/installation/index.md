@@ -2,6 +2,7 @@
 title: "Installation"
 weight: 20
 subtree: /documentation/installation/
+order: 1
 ---
 
 ### Installation

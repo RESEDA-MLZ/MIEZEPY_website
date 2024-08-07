@@ -6,27 +6,31 @@
 <ul>
 {% assign nextdepth = include.depth | plus:1 %}
 {% assign prevdepth = include.depth | minus:1 %}
-{% for p in site.pages %}
-{%- if p.dir == include.folder -%}
-{%- if p.name contains "index" -%}
-{% else %}
-  <li class="{{ listyle }}">{{ addi }}<a href="{{site.baseurl}}{{p.url}}"><span>{{ p.title }}</span></a></li>
-  {% if include.showdesc %}<p>{{ p.description }}</p>{% endif %}
-{% endif %}
-{% else %}
-{% if p.dir contains include.folder %}
-{% assign parts = p.dir | split: "/" %}
-{% if parts.size == nextdepth and p.name contains "index" %}
-<li class="{{ listyle }}">{{ addclosed }}<a href="{{site.baseurl}}{{p.url}}"><span>{{ p.title }}</span></a>
-{% if include.showdesc %}
-  </li><p>{{ p.description }}</p>
-{% else %}
-  {% include listdir.html folder=p.dir depth=nextdepth style=include.style %}</li>
-{% endif %}
-{% assign nextdepth = include.depth | plus:1 %}
-{% assign prevdepth = include.depth | minus:1 %}
-{%- endif -%}
-{%- endif -%}
-{%- endif -%}
+
+{% assign sorted_pages = site.pages | where: "dir", include.folder | sort: "order" %}
+
+{% for p in sorted_pages %}
+  {%- if p.dir == include.folder -%}
+    {%- if p.name contains "index" -%}
+    {% else %}
+      <li class="{{ listyle }}">{{ addi }}<a href="{{site.baseurl}}{{p.url}}"><span>{{ p.title }}</span></a></li>
+      {% if include.showdesc %}<p>{{ p.description }}</p>{% endif %}
+    {% endif %}
+  {%- else -%}
+    {% if p.dir contains include.folder %}
+      {% assign parts = p.dir | split: "/" %}
+      {% if parts.size == nextdepth and p.name contains "index" %}
+        <li class="{{ listyle }}">{{ addclosed }}<a href="{{site.baseurl}}{{p.url}}"><span>{{ p.title }}</span></a>
+        {% if include.showdesc %}
+          </li><p>{{ p.description }}</p>
+        {% else %}
+          {% include listdir.html folder=p.dir depth=nextdepth style=include.style %}
+        </li>
+        {% endif %}
+        {% assign nextdepth = include.depth | plus:1 %}
+        {% assign prevdepth = include.depth | minus:1 %}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endif -%}
 {% endfor %}
 </ul>
