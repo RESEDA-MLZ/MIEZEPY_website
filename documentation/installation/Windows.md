@@ -3,44 +3,61 @@ title: "Windows"
 weight: 23
 ---
 
-# Installing MIEZEPY on Windows OS
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIEZEPY Installation Guide</title>
+</head>
+<body>
 
-Currently Windows only supports an installation through the command prompt. In the following steps we will install python and the required dependencies to run the package both in scripting and GUI mode. Note that at this point the installation of MIEZEPY requires basic knowledge in command prompt.
+<h1>Installation Guide for MIEZEPY</h1>
 
-### 1. Downloading the source
+<h2>Windows Installation</h2>
 
-The GitHub repository of the MIEZEPY project can be downloaded here: https://github.com/RESEDA-MLZ/miezepy. As the download is completed the user is required to unzip the .zip content and open a terminal window in the downloaded folder. This can be done by either right clicking on an empty field within the folder and selecting Open terminal or by directly entering cd Path/to/folder in an already opened terminal window.
+<p>Since the program is based on Python, it also works under Windows, with different aspects having to be considered:</p>
 
+<h3>Preparations</h3>
+<p>It is recommended to install Python via the Anaconda package. A Win10 version can be found here: <a href="https://www.anaconda.com/download/#windows">https://www.anaconda.com/download/#windows</a>. After you have installed Anaconda, we recommend creating a separate environment within Anaconda solely for MIEZEPY. This ensures that all packages for MIEZEPY are kept together and no dependencies are overwritten when installing other Python software. The full instructions for environments can be found here: <a href="https://conda.io/docs/user-guide/tasks/manage-environments.html">https://conda.io/docs/user-guide/tasks/manage-environments.html</a>.</p>
 
-### 2. Make sure anaconda is installed
+<p>To create an environment, open the Anaconda Prompt, which is also the recommended command line on Windows for interacting with Anaconda/Python.</p>
 
-Anaconda (for Windows) can be downloaded here: https://www.anaconda.com/download/#windows
-Before installing this software, it is useful to create a separate environment in anaconda. Follow the steps from: https://conda.io/docs/user-guide/tasks/manage-environments.html to create an environment with version 3.7 of python. Currently (02.08.2024) newer version are not supported due to some requirement conflicts with simpleplot_qt(https://github.com/AlexanderSchober/simpleplot_qt.git). We are working on fixing this issue. 
-Activate this environment.
+<figure>
+    <img src="AnacondaPromptWin10.png" alt="Anaconda Prompt on Windows 10" style="width:70%;">
+    <figcaption>Caption</figcaption>
+</figure>
 
-### 3. Check pip and python installation
+<p>A new environment named "miezepy", with Python 3.7 and the required modules can be created with the command:</p>
 
-In order to install the miezepy package and run it as intended we recommend to use the last versions of python and pip. To check the current version type the following commands into the command prompt window:
-```bash
-$ python --version
-$ pip --version
-```
+<pre>
+<code>
+conda create --name miezepy python==3.7
+</code>
+</pre>
 
-### 4. Installing the requirements
+<p>Afterwards, update pip and install the most recent version of setuptools:</p>
 
-Good news: It is no longer necessary to separately install the requirements. It is done during the installation.
+<pre>
+<code>
+python -m pip install -U pip setuptools
+</code>
+</pre>
 
-### 5. Installing the software
+<p>Additionally, the installation of the PyQt5 package requires the installation of C++ compiler tools, e.g., via Visual Studio. On Windows 10, open Visual Studio and select modify.</p>
 
-Finally, the software can be installed through the command:
-```bash
-$ python setup.py install
-```
+<h3>Installing the Software</h3>
 
-### 6. Testing the installation
+<p>The GitHub repository of the MIEZEPY project can be downloaded here: <a href="https://github.com/RESEDA-MLZ/MIEZEPY">https://github.com/RESEDA-MLZ/MIEZEPY</a>. (Ideally, the git repository can also be cloned, if you are familiar with git.) As the download is completed, the user is required to unzip the .zip content and open a terminal window in the downloaded folder. This can be done by either right-clicking on an empty field within the folder and selecting "Open terminal" or by directly entering:</p>
 
-Once the installation is finished the software can be tested by launching the python interpreter through:
+<pre>
+<code>
+cd Path/to/folder
+</code>
+</pre>
 
-```bash
-$ python miezepy.py
-```
+<p>in an already opened terminal window.</p>
+
+</body>
+</html>
+
