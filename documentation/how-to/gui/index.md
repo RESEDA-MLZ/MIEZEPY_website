@@ -5,7 +5,7 @@ weight: 80
 subtree: /documentation/how-to/gui/
 ---
 
-### How-To
+### How-To MIEZEPY
 
 <html lang="en">
 <head>
