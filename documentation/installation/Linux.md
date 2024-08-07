@@ -1,8 +1,8 @@
 ---
 title: "Linux"
 weight: 21
-dir: /documentation/installation/
-order: 2
+parent: installation
+order: 1
 ---
 
 <html lang="en">
