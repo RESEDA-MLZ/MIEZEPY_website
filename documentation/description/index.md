@@ -2,6 +2,7 @@
 title: "Description"
 description: "Description of the software"
 weight: 40
+order: 4
 ---
 
 ### Description

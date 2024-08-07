@@ -2,13 +2,24 @@
 title: "Installation"
 weight: 20
 subtree: /documentation/installation/
+order: 1
 ---
 
 ### Installation
 
-The installation of MIEZEPY is possible on all three major platforms. As of now no visual installation is provided and relies solely on command line inputs. 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIEZEPY Installation Guide</title>
+</head>
+<body>
 
-Once the installation is complete it is possible to look up the How-To's to launch and use the package.
+<h2>General Installation Instructions</h2>
 
-Select your operating system:
+<p>The following sections describe the installation process for the different operating systems. See the website for the latest documentation and updates: <a href="https://scgmlz.github.io/MIEZEPY_website/">https://scgmlz.github.io/MIEZEPY_website/</a>. Currently, only installation through the terminal/command prompt is supported. Note that at this point the installation of MIEZEPY requires basic knowledge in terminal input. In the following steps, we will install Python and the required dependencies to run the package both in scripting and GUI mode.</p>
+
+</body>
+</html>
+
 

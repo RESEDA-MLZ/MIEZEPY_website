@@ -3,76 +3,60 @@ title: "Windows"
 weight: 23
 ---
 
-# Installing MIEZEPY on Windows OS
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIEZEPY Installation Guide</title>
+</head>
+<body>
 
-Currently Windows only supports an installation through the command prompt. In the following steps we will install python and the required dependencies to run the package both in scripting and GUI mode. Note that at this point the installation of MIEZEPY requires basic knowledge in command prompt.
+<h1>Installation Guide for MIEZEPY</h1>
 
-### 1. Downloading the source
+<h2>Windows Installation</h2>
 
-The GitHub repository of the MIEZEPY project can be downloaded here: https://github.com/scgmlz/NSE_Soft. As the download is completed the user is required to unzip the .zip content and open a terminal window in the downloaded folder. This can be done by either right clicking on an empty field within the folder and selecting Open terminal or by directly entering cd Path/to/folder in an already opened terminal window.
+<p>Since the program is based on Python, it also works under Windows, with different aspects having to be considered:</p>
 
-![Example image]({{ site.baseurl }}/img/windows_download.png#center)
+<h3>Preparations</h3>
+<p>It is recommended to install Python via the Anaconda package. A Win10 version can be found here: <a href="https://www.anaconda.com/download/#windows">https://www.anaconda.com/download/#windows</a>. After you have installed Anaconda, we recommend creating a separate environment within Anaconda solely for MIEZEPY. This ensures that all packages for MIEZEPY are kept together and no dependencies are overwritten when installing other Python software. The full instructions for environments can be found here: <a href="https://conda.io/docs/user-guide/tasks/manage-environments.html">https://conda.io/docs/user-guide/tasks/manage-environments.html</a>.</p>
 
-### 2. Make sure anaconda is installed
+<p>To create an environment, open the Anaconda Prompt, which is also the recommended command line on Windows for interacting with Anaconda/Python.</p>
 
-Anaconda (for Windows) can be downloaded here: https://www.anaconda.com/download/#windows
-Before installing this software, it is useful to create a separate environment in anaconda. Follow the steps from: https://conda.io/docs/user-guide/tasks/manage-environments.html to create an environment with the current version of python3 (3.7 at 18.12.2018).
-Activate this environment.
+<figure>
+    <img src="AnacondaPromptWin10.png" alt="Anaconda Prompt on Windows 10" style="width:70%;">
+    <figcaption>Caption</figcaption>
+</figure>
 
-![Example image]({{ site.baseurl }}/img/windows_env.png#center)
+<p>A new environment named "miezepy", with Python 3.7 and the required modules can be created with the command:</p>
 
-### 3. Check pip and python installation
+<pre>
+<code>
+conda create --name miezepy python==3.7
+</code>
+</pre>
 
-In order to install the miezepy package and run it as intended we recommend to use the last versions of python and pip. To check the current version type the following commands into the command prompt window:
-```bash
-$ python --version
-$ pip --version
-```
-![Example image]({{ site.baseurl }}/img/windows_python_version.png#center)
+<p>Afterwards, update pip and install the most recent version of setuptools:</p>
 
-### 4. Installing the requirements
+<pre>
+<code>
+python -m pip install -U pip setuptools
+</code>
+</pre>
 
-The MIEZEPY package has dependencies on some common (like numpy) and less common (like PyQt5) python libraries. These need to be installed in order to launch the package. In any terminal window enter the following commands:
+<p>Additionally, the installation of the PyQt5 package requires the installation of C++ compiler tools, e.g., via Visual Studio. On Windows 10, open Visual Studio and select modify.</p>
 
-```bash
-$ pip install -r requirements.txt
-```
+<h3>Installing the Software</h3>
 
-On windows, some packages have been specifically compiled to run on the platform and can be installed through the conda repositories. if any of the requirements (listed in requirements.txt) is missing you can attempt to mannually install it. This is, for example, the case of the iminuit minimizer package which can then be installed as follows:
+<p>The GitHub repository of the MIEZEPY project can be downloaded here: <a href="https://github.com/RESEDA-MLZ/MIEZEPY">https://github.com/RESEDA-MLZ/MIEZEPY</a>. (Ideally, the git repository can also be cloned, if you are familiar with git.) As the download is completed, the user is required to unzip the .zip content and open a terminal window in the downloaded folder. This can be done by either right-clicking on an empty field within the folder and selecting "Open terminal" or by directly entering:</p>
 
-```bash
-$ conda install iminuit
-```
+<pre>
+<code>
+cd Path/to/folder
+</code>
+</pre>
 
-In the event that you which to completely use the anaconda package manager you can proceed to the following command:
+<p>in an already opened terminal window.</p>
 
-```bash
-$ conda install --yes --file requirements.txt 
-```
+</body>
+</html>
 
-![Example image]({{ site.baseurl }}/img/windows_requirements.png#center)
-
-It may be necessary to install some packages separately via this installation route as well. Once the requirements are installed a graphical PyQt library and plotting library derived from PyQt and pyqtgraph, can be installed:
-
-```bash
-$ pip install git+https://github.com/pyqtgraph/pyqtgraph.git
-$ pip install git+https://github.com/AlexanderSchober/simpleplot_qt.git
-```
-
-### 5. Installing the software
-
-Finally, the software can be installed through the command:
-```bash
-$ python setup.py install
-```
-
-### 6. Testing the installation
-
-Once the installation is finished the software can be tested by launching the python interpreter through:
-
-```bash
-$ python3
-    >> import miezepy
-    >> miezepy.__version__
-```
-![Example image]({{ site.baseurl }}/img/windows_version_test.png#center)

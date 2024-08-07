@@ -1,66 +1,68 @@
 ---
 title: "Linux"
 weight: 21
+parent: installation
+order: 1
 ---
 
-# Installing MIEZEPY on Linux
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIEZEPY Installation Guide</title>
+</head>
+<body>
 
-Currently Linux only supports an installation through the terminal. In the following steps we will install python and the recquired dependencies to run the package both in scripting and GUI mode. Note that at this point the installation of MIEZEPY requires basic knowledge in terminal input.
+<h1>Installation Guide for MIEZEPY</h1>
 
-### 1. Downloading the source
+<p>Linux is the recommended operating system since the software was mainly developed and tested there.</p>
 
-![Example image]({{ site.baseurl }}/img/Linux_open_terminal.png#floatright)The GitHub repository of the MIEZEPY project can be downloaded [here](https://github.com/scgmlz/NSE_Soft). As the download completes the user is required to unzip the .zip content and open a terminal window in the downloaded folder. This can be done by either rightclicking an empty field within the folder and selecting ```Open terminal``` or directly entering ```cd Path/to/folder``` in an already opened terminal window.
+<p>The GitHub repository of the MIEZEPY project can be downloaded from <a href="https://github.com/RESEDA-MLZ/MIEZEPY">https://github.com/RESEDA-MLZ/MIEZEPY</a> either by downloading and unpacking the .zip version or by cloning via git. After navigating the terminal to the data by e.g.,</p>
 
-### 2. Installing Python 3
+<pre>
+<code>
+$ cd /path/to/my/folder/MIEZEPY-main
+</code>
+</pre>
 
-The MIEZEPY package has been written exclusively in python and supports only python 3. To this effect an installation of python 3 is required to run the software. If not already present it is possible to install it through the following command:
-```bash
-$ sudo apt-get install python3.7
-```
+<p>To prevent conflicts with already installed Python packages (or installations other than the required version 3.7), we recommend the creation and activation of a new environment. Below is example code taking advantage of the anaconda package manager:</p>
 
-Furthermore, we require to install a common package manager for python called pip through:
-```bash
-$ sudo apt-get install python3-pip
-```
-The last step might not be necessary as for some python versions pip is included by default. If the installation is successful we can proceed by checking the installation versions:
+<pre>
+<code>
+conda create --name miezepyenv python==3.7
+conda activate miezepyenv
+</code>
+</pre>
 
-```bash
-$ python3 --version
-$ pip3 --version
-```
+<p>Afterwards, we update the pip package manager and install the setuptools package via:</p>
 
-If the above command fails try to replace pip3 ith pip as pip not being installed by default on linux it might select the former namespace. Finally, the output should be the version numbers of python and pip above 3.6.6 and 18.1 (at the time of writing) respectively.
+<pre>
+<code>
+python -m pip install -U pip setuptools
+</code>
+</pre>
 
-![Example image]({{ site.baseurl }}/img/linux_version_test.png#center)
+<p>The MIEZEPY package depends on some common (like numpy) and less common (like PyQt) python libraries. These will be downloaded and installed via pip during the installation process. To start the process:</p>
 
+<pre>
+<code>
+python setup.py install
+</code>
+</pre>
 
-### 3. Installing the dependencies and software
+<p>Once the installation is finished, it can be tested by launching the Python interpreter through:</p>
 
-The MIEZEPY package has dependencies on some common (like numpy) and less common (like PyQt) python libraries. These need to be installed in order to launch the package. In any terminal window enter the following commands:
+<pre>
+<code>
+python miezepy.py
+</code>
+</pre>
 
-```bash
-$ sudo pip3 pip3 install -r requirements.txt
-$ sudo pip3 install git+git://github.com/pyqtgraph/pyqtgraph.git
-$ sudo pip3 install git+git://github.com/AlexanderSchober/simpleplot_qt.git
-```
+<p>(executed inside the MIEZEPY-main folder), which should open the program immediately.</p>
 
-The first command installs the requirements defined in the requirements.txt file included in the repository. The second line installs a graphical PyQt library and the third command install the ploting library derived from PyQt and pyqtgraph. Finally the software can be installed through the command:
+</body>
+</html>
 
-```bash
-$ python3 setup.py install
-```
-
-### 4. Testing the installation
-
-Once the installation is finished the software can be tested by launching the python interpreter through:
-
-```bash
-$ python3
-    >> import miezepy
-    >> miezepy.__version__
-```
-
-This should provided the version number of the downloaded distribution.
 
 
 
