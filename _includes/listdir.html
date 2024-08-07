@@ -20,7 +20,9 @@
         {% include listdir.html folder=p.dir depth=nextdepth style=include.style %}
       </li>
       {% endif %}
-    {% elif p.dir == include.folder and p.name != "index.md" %}
+    {% endif %}
+    
+    {% if p.dir == include.folder and p.name != "index.md" %}
       <li class="{{ listyle }}">{{ addi }}<a href="{{ site.baseurl }}{{ p.url }}"><span>{{ p.title }}</span></a></li>
       {% if include.showdesc %}<p>{{ p.description }}</p>{% endif %}
     {% endif %}
