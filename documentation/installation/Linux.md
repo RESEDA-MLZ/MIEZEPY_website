@@ -3,7 +3,6 @@ title: "Linux"
 weight: 21
 ---
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
