@@ -1,8 +1,6 @@
 ---
 title: "Linux"
-weight: 6
-parent: installation
-order: 1
+weight: 011
 ---
 
 <html lang="en">

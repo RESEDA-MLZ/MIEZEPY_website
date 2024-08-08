@@ -1,7 +1,7 @@
 ---
 title: "Architecture"
 description: "Description of the software architecture"
-weight: 42
+weight: 411
 ---
 
 ### MIEZEPY Architecture

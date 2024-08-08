@@ -1,9 +1,8 @@
 ---
 title: "Examples"
 description: "Description of the software"
-weight: 20
+weight: 201
 subtree: /documentation/examples/
-order: 3
 ---
 
 ### Examples

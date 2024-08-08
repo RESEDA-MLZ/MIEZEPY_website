@@ -1,8 +1,7 @@
 ---
 title: "How-To MIEZEPY"
-weight: 10
+weight: 101
 subtree: /documentation/how-to/
-order: 2
 ---
 
 ### How-To MIEZEPY

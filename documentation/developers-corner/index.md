@@ -1,7 +1,6 @@
 ---
 title: "Developer's corner"
-weight: 50
-parent: 
+weight: 501
 ---
 
 ## Developer's corner

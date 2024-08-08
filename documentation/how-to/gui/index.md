@@ -1,7 +1,7 @@
 ---
 title: "How-To use the GUI"
 description: "Introduction on performing basic tasks through the GUI of MIEZEPY "
-weight: 15
+weight: 111
 subtree: /documentation/how-to/gui/
 ---
 
