@@ -68,13 +68,13 @@ A list of the tof - files belonging to one dataset can be selected under "Files"
 
 Note: This will NOT overwrite the tof - files. Thus, your original data remains the same.
 
-![The Data Import tab](data_import.png)
+![The Data Import tab](DataImportWrongWL.png)
 *Fig. 2:The Data Import tab: 1: create a new dataset 2: List of datasets with their information 3: tof - files to be imported into an environment 4: visualization of the integrated intensity in the selected tof - file 5: manipulation of the metadata of the selected dataset 6: validate - checks if input is valid and loads it into the environment.*
 
 ### Masks
 An integral part of every data reduction is to select where the interesting signal appears on the position-sensitive detector.
 
-![The Mask Creation tab](masks.png)
+![The Mask Creation tab](MaskCreationOverview.png)
 *Fig.3: The Mask Creation tab: 1: selection of the current mask, when "New..." is selected, you can type the new name in here and confirm with the "Enter" key. 2: Add a new shape to the current mask. 3: Manipulate the shapes within this mask. 4: Visualization of the current shapes.*
 
 ### Data Reduction
