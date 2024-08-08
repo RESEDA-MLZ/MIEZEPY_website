@@ -2,6 +2,7 @@
 title: "Description"
 description: "Description of the software"
 weight: 401
+subtree: /documentation/description/
 ---
 
 ### Description
