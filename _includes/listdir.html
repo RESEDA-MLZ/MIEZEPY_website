@@ -6,7 +6,8 @@
 <ul>
 {% assign nextdepth = include.depth | plus:1 %}
 {% assign prevdepth = include.depth | minus:1 %}
-{% for p in site.pages %}
+{% assign sorted_pages = site.pages | sort:"weight" %}
+{% for p in sorted_pages %}
 {%- if p.dir == include.folder -%}
 {%- if p.name contains "index" -%}
 {% else %}
