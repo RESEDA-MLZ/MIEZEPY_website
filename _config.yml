@@ -40,6 +40,11 @@ PygmentsUseClassic: false
 PygmentsUseClasses: true
 PygmentsStyle: "vs"
 
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+
 params:
   DateForm: "Mon, Jan 2, 2006"
   Description: ""
