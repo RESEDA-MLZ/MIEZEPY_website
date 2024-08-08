@@ -2,6 +2,7 @@
 title: "Linux"
 weight: 011
 ---
+# Linux Installation
 
 Linux is the recommended operating system since the software was mainly developed and tested there.
 
@@ -27,7 +28,6 @@ python -m pip install -U pip setuptools
 The MIEZEPY package depends on some common (like numpy) and less common (like PyQt) python libraries. These will be downloaded and installed via pip during the installation process. To start the process:
 
 ```bash
-# comment
 python setup.py install
 ```
 

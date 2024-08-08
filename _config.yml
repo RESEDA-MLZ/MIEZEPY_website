@@ -43,7 +43,7 @@ params:
   Description: ""
   Author: "Alexander Schober"
   email: ["alex.schober@mac.com"]
-  custom_css: ["css/MIEZEPY.css","css/github.css"]
+  custom_css: ["css/MIEZEPY.css","css/rouge.css"]
   custom_js: ["js/MIEZEPY.js"]
   logo: "img/site-logo.png"
   Debug: false
