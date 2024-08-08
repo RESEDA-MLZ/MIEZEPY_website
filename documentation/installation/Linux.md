@@ -3,6 +3,8 @@ title: "Linux"
 weight: 011
 ---
 
+## Linux Installation
+
 Linux is the recommended operating system since the software was mainly developed and tested there.
 
 The GitHub repository of the MIEZEPY project can be downloaded [here](https://github.com/RESEDA-MLZ/MIEZEPY) either by downloading and unpacking the .zip version or by cloning via git. After navigating the terminal to the data by, e.g.,
