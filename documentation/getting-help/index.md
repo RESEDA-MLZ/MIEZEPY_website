@@ -1,6 +1,6 @@
 ---
 title: "Getting help"
-weight: 200
+weight: 25
 subtree: /documentation/getting-help/
 ---
 

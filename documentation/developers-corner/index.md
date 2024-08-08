@@ -1,7 +1,6 @@
 ---
 title: "Developer's corner"
-weight: 300
-order: 5
+weight: 50
 parent: 
 ---
 

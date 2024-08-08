@@ -1,6 +1,6 @@
 ---
 title: "Contribute to documentation"
-weight: 310
+weight: 51
 ---
 
 ## Contribute to documentation 

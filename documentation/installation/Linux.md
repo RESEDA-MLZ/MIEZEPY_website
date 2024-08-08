@@ -1,6 +1,6 @@
 ---
 title: "Linux"
-weight: 21
+weight: 6
 parent: installation
 order: 1
 ---

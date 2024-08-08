@@ -1,6 +1,6 @@
 ---
 title: "MacOs"
-weight: 22
+weight: 8
 ---
 
 # Installing MIEZEPY on MacOs X
