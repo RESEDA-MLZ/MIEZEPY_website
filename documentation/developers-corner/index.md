@@ -1,7 +1,7 @@
 ---
 title: "Developer's corner"
 weight: 501
-/documentation/developers-corner/
+subtree: /documentation/developers-corner/
 ---
 
 ## Developer's corner

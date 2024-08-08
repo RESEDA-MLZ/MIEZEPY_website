@@ -34,18 +34,16 @@ sectionPagesMenu: "main"
 paginate: 5
 paginate_path: "/news/:num/"
 
-# Code
-PygmentsCodeFences: true
-PygmentsUseClassic: false
-PygmentsUseClasses: true
-PygmentsStyle: "vs"
+markdown: kramdown
+highlighter: rouge
+input: GFM
 
 params:
   DateForm: "Mon, Jan 2, 2006"
   Description: ""
   Author: "Alexander Schober"
   email: ["alex.schober@mac.com"]
-  custom_css: ["css/MIEZEPY.css"]
+  custom_css: ["css/MIEZEPY.css","css/rouge.css"]
   custom_js: ["js/MIEZEPY.js"]
   logo: "img/site-logo.png"
   Debug: false
