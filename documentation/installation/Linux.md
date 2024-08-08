@@ -19,6 +19,7 @@ conda create --name miezepyenv python==3.7
 conda activate miezepyenv
 ```
 
+
 Afterwards, we update the pip package manager and install the setuptools package via:
 
 ```bash
